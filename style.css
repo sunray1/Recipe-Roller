@@ -1,0 +1,144 @@
+:root {
+  color-scheme: light dark;
+  --bg: #f5f1e8;
+  --card: #fffdf8;
+  --text: #22201d;
+  --muted: #706a62;
+  --border: #d9d1c5;
+  --button: #24211d;
+  --button-text: #fffdf8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #171614;
+    --card: #211f1c;
+    --text: #f4efe6;
+    --muted: #aaa298;
+    --border: #3d3933;
+    --button: #f4efe6;
+    --button-text: #171614;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.app {
+  width: min(100%, 620px);
+  text-align: center;
+}
+
+.eyebrow, .label {
+  font-size: .75rem;
+  font-weight: 800;
+  letter-spacing: .14em;
+  color: var(--muted);
+}
+
+h1 {
+  margin: 8px 0 8px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.2rem, 8vw, 4rem);
+  line-height: .98;
+}
+
+.intro {
+  margin: 0 auto 28px;
+  color: var(--muted);
+}
+
+.result {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: clamp(28px, 7vw, 48px);
+}
+
+.book {
+  margin-top: 10px;
+  min-height: 2.5em;
+  display: grid;
+  place-items: center;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.6rem, 6vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.divider {
+  width: 56px;
+  height: 1px;
+  margin: 28px auto;
+  background: var(--border);
+}
+
+.page {
+  margin-top: 2px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(4rem, 18vw, 7rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+button {
+  min-height: 50px;
+  border: 1px solid var(--button);
+  border-radius: 12px;
+  padding: 12px 16px;
+  background: var(--button);
+  color: var(--button-text);
+  font: inherit;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+button.secondary {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--border);
+}
+
+button:disabled {
+  opacity: .45;
+  cursor: not-allowed;
+}
+
+button:not(:disabled):active {
+  transform: translateY(1px);
+}
+
+button:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 3px;
+}
+
+.status {
+  min-height: 1.5em;
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+.status.error { color: #b43a32; }
+
+@media (max-width: 480px) {
+  .actions { grid-template-columns: 1fr; }
+}
