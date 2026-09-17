@@ -166,7 +166,7 @@ async function loadCookbooks() {
 
     rerollBookButton.disabled = false;
     rerollPageButton.disabled = false;
-    statusEl.textContent = `${cookbooks.length} cookbooks loaded from Google Sheets.`;
+    statusEl.innerHTML = `${cookbooks.length} cookbooks loaded from <a href="https://docs.google.com/spreadsheets/d/1w8XswTHvoTdkI1gOL-TtOqC0zCNddr77ULgjxyWkJgA/edit?gid=0#gid=0" target="_blank" rel="noopener noreferrer">Google Sheets</a>.`;
     renderBookAndPage();
   } catch (error) {
     console.error(error);
