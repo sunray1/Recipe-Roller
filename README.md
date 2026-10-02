@@ -4,7 +4,7 @@ A small static site that randomly chooses a cookbook from a Google Sheet and the
 
 It is already configured for this Google Sheet:
 
-https://docs.google.com/document/d/1P5HcJNq12RrXVGTHrkzH6oyccuwTMYWcWwoBWFHurg4
+https://docs.google.com/spreadsheets/d/1w8XswTHvoTdkI1gOL-TtOqC0zCNddr77ULgjxyWkJgA/edit?usp=drivesdk
 
 ## Expected Google Sheet format
 
